@@ -10,14 +10,9 @@ window.title('Hangman Game')
 window.state('zoomed')
 
 #variables
-words = ['relation','poem','government','arrival','ladder','situation','possession','administration',
-'percentage','clothes','soup','imagination','airport','cheek','girlfriend','event','lab','sample','hospital',
-'hearing','force','language','fight','credit','comparison','nerve','bedroom','mint','attention','apparel','linen',
-'island','bulb','sand','nose','scarecrow','frame','breakfast','scarf','measure','behavior','calculator','development',
-'range','frog','station','writer','beginner','worm','order','texture','apparatus','fish','wilderness','wool','sock','dust',
-'crush','father','cap','spot','dinosaurs','humor','bread','zebra','chess','garden','tongue','rock','look','chicken',
-'base','cart','queen','cake','addition','rabbits','cattle','furniture','fly','goose','jam','mine','brother'
-'soap','blade','thrill','birthday','tin','argument','coach','fruit','division','fang','doll','bead','structure','junior','tune','brave','include']
+words = open('words.txt', 'r')
+words = words.read().split(';')
+print(words)
 word = random.choice(words)
 move = 0
 letters = list(string.ascii_lowercase)
